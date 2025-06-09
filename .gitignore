@@ -1,0 +1,43 @@
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Docker related
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Java
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+target/
+build/
+
+# Gradle
+.gradle/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Warehouse data (can be regenerated)
+projects/*/warehouse/demo/
+projects/*/warehouse/**/data/
+
+# Ivy cache
+projects/*/ivy2-cache/

@@ -1,0 +1,36 @@
+services:
+  spark-iceberg:
+    image: jupyter/pyspark-notebook:spark-3.5.0
+    container_name: spark-iceberg
+    ports:
+      - "8888:8888"  # Jupyter Lab
+      - "4040:4040"  # Spark UI
+      - "8080:8080"  # Spark Master UI
+    volumes:
+      - ./warehouse:/home/jovyan/work/warehouse
+      - ./scripts:/home/jovyan/work/scripts
+      - ./notebooks:/home/jovyan/work/notebooks
+      - ./ivy2-cache:/home/jovyan/.ivy2
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+      - SPARK_HOME=/usr/local/spark
+      - PYTHONPATH=/usr/local/spark/python/lib/pyspark.zip:/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip
+      - PYSPARK_PYTHON=/opt/conda/bin/python
+      - PYSPARK_DRIVER_PYTHON=/opt/conda/bin/python
+      - SPARK_OPTS=--packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.3 --conf spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog --conf spark.sql.catalog.local.type=hadoop --conf spark.sql.catalog.local.warehouse=/home/jovyan/work/warehouse
+    working_dir: /home/jovyan/work
+    user: root
+    command: bash -c "
+      mkdir -p /home/jovyan/.ivy2/cache &&
+      chmod -R 777 /home/jovyan/.ivy2 &&
+      mkdir -p /home/jovyan/work/warehouse &&
+      chown -R jovyan:users /home/jovyan/work &&
+      chmod -R 777 /home/jovyan/work/warehouse &&
+      echo 'export SPARK_HOME=/usr/local/spark' >> /home/jovyan/.bashrc &&
+      echo 'export PYTHONPATH=/usr/local/spark/python/lib/pyspark.zip:/usr/local/spark/python/lib/py4j-0.10.9.7-src.zip' >> /home/jovyan/.bashrc &&
+      echo 'export PYSPARK_PYTHON=/opt/conda/bin/python' >> /home/jovyan/.bashrc &&
+      echo 'export PYSPARK_DRIVER_PYTHON=/opt/conda/bin/python' >> /home/jovyan/.bashrc &&
+      echo 'export PATH=\$PATH:/opt/conda/bin' >> /home/jovyan/.bashrc &&
+      pip install pyspark==3.5.0 &&
+      su - jovyan -c '/opt/conda/bin/jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=\"\" --NotebookApp.password=\"\"'"
