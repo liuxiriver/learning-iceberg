@@ -1,164 +1,164 @@
-# 实践项目目录
+# Practice Projects Directory
 
-这个目录用于存放学习过程中的实际项目代码和配置文件。
+This directory contains actual project code and configuration files during the learning process.
 
-## 📂 项目结构
+## 📂 Project Structure
 
 ```
 projects/
-├── 01-first-iceberg-table/         # ✅ 项目1：创建第一个Iceberg表 (已完成)
-│   ├── docker-compose.yml          # Docker环境配置
-│   ├── manage.sh                   # 环境管理脚本
-│   ├── notebooks/                  # Jupyter教程和示例
-│   │   └── iceberg-tutorial.ipynb  # 完整的Iceberg教程
-│   ├── scripts/                    # 测试脚本
-│   ├── warehouse/                  # Iceberg表存储位置
-│   ├── README.md                   # 项目详细说明
-│   └── SPARK_VS_ICEBERG.md        # Spark与Iceberg关系说明
-├── 02-schema-evolution/            # 项目2：Schema演进实验 (规划中)
-│   ├── scripts/                    # 演示脚本
-│   ├── test-data/                  # 测试数据
-│   └── README.md                   # 项目说明
-├── 03-time-travel/                 # 项目3：时间旅行功能 (规划中)
-│   ├── demo/                       # 演示代码
-│   └── README.md                   # 项目说明
-├── 04-cloud-integration/           # 项目4：云平台集成 (规划中)
-│   ├── aws/                        # AWS配置
-│   ├── azure/                      # Azure配置
-│   └── README.md                   # 项目说明
-└── 05-production-pipeline/         # 项目5：生产数据管道 (规划中)
-    ├── spark-jobs/                 # Spark作业
-    ├── monitoring/                 # 监控配置
-    └── README.md                   # 项目说明
+├── 01-first-iceberg-table/         # ✅ Project 1: First Iceberg Table (Completed)
+│   ├── docker-compose.yml          # Docker environment configuration
+│   ├── manage.sh                   # Environment management script
+│   ├── notebooks/                  # Jupyter tutorials and examples
+│   │   └── iceberg-tutorial.ipynb  # Complete Iceberg tutorial
+│   ├── scripts/                    # Test scripts
+│   ├── warehouse/                  # Iceberg table storage location
+│   ├── README.md                   # Detailed project documentation
+│   └── SPARK_VS_ICEBERG.md        # Spark vs Iceberg relationship documentation
+├── 02-schema-evolution/            # Project 2: Schema Evolution Experiments (Planned)
+│   ├── scripts/                    # Demo scripts
+│   ├── test-data/                  # Test data
+│   └── README.md                   # Project documentation
+├── 03-time-travel/                 # Project 3: Time Travel Features (Planned)
+│   ├── demo/                       # Demo code
+│   └── README.md                   # Project documentation
+├── 04-cloud-integration/           # Project 4: Cloud Platform Integration (Planned)
+│   ├── aws/                        # AWS configuration
+│   ├── azure/                      # Azure configuration
+│   └── README.md                   # Project documentation
+└── 05-production-pipeline/         # Project 5: Production Data Pipeline (Planned)
+    ├── spark-jobs/                 # Spark jobs
+    ├── monitoring/                 # Monitoring configuration
+    └── README.md                   # Project documentation
 ```
 
-## 🎯 项目完成状态
+## 🎯 Project Completion Status
 
-### ✅ Project 1: 创建第一个Iceberg表 (已完成)
-- **学习目标**: 掌握Iceberg表的基本创建和操作 ✅
-- **技术栈**: Docker, Spark, Iceberg, Jupyter Notebook ✅
-- **完成时间**: 已完成
-- **主要成果**:
-  - ✅ 搭建了完整的Docker开发环境
-  - ✅ 成功集成Spark 3.5.0 + Iceberg 1.4.3
-  - ✅ 创建了交互式Jupyter教程
-  - ✅ 实现了数据插入、查询和metadata探索
-  - ✅ 解决了Python版本冲突和权限问题
-  - ✅ 验证了分区功能和ACID事务特性
+### ✅ Project 1: First Iceberg Table (Completed)
+- **Learning Goal**: Master basic Iceberg table creation and operations ✅
+- **Tech Stack**: Docker, Spark, Iceberg, Jupyter Notebook ✅
+- **Completion Time**: Completed
+- **Main Achievements**:
+  - ✅ Built complete Docker development environment
+  - ✅ Successfully integrated Spark 3.5.0 + Iceberg 1.4.3
+  - ✅ Created interactive Jupyter tutorial
+  - ✅ Implemented data insertion, querying and metadata exploration
+  - ✅ Resolved Python version conflicts and permission issues
+  - ✅ Verified partitioning and ACID transaction features
 
-### 🔄 Project 2: Schema Evolution实验 (规划中)
-- **学习目标**: 理解并实践schema演进功能
-- **技术栈**: Spark SQL, Schema管理
-- **预计时间**: 2-3天
+### 🔄 Project 2: Schema Evolution Experiments (Planned)
+- **Learning Goal**: Understand and practice schema evolution functionality
+- **Tech Stack**: Spark SQL, Schema management
+- **Estimated Time**: 2-3 days
 
-### 🔄 Project 3: Time Travel功能 (规划中)
-- **学习目标**: 掌握快照管理和时间旅行查询
-- **技术栈**: Spark SQL, 快照API
-- **预计时间**: 2天
+### 🔄 Project 3: Time Travel Features (Planned)
+- **Learning Goal**: Master snapshot management and time travel queries
+- **Tech Stack**: Spark SQL, Snapshot API
+- **Estimated Time**: 2 days
 
-### 🔄 Project 4: 云平台集成 (规划中)
-- **学习目标**: 在云环境中部署和使用Iceberg
-- **技术栈**: AWS S3/Glue, 或 Azure ADLS
-- **预计时间**: 3-5天
+### 🔄 Project 4: Cloud Platform Integration (Planned)
+- **Learning Goal**: Deploy and use Iceberg in cloud environments
+- **Tech Stack**: AWS S3/Glue, or Azure ADLS
+- **Estimated Time**: 3-5 days
 
-### 🔄 Project 5: 生产数据管道 (规划中)
-- **学习目标**: 构建完整的生产级数据管道
-- **技术栈**: Spark, 云服务, 监控
-- **预计时间**: 1-2周
+### 🔄 Project 5: Production Data Pipeline (Planned)
+- **Learning Goal**: Build complete production-grade data pipeline
+- **Tech Stack**: Spark, Cloud services, Monitoring
+- **Estimated Time**: 1-2 weeks
 
-## 📋 项目1完成成果 ✅
+## 📋 Project 1 Completion Results ✅
 
-### 🛠️ 技术环境
-- **Docker化部署**: 一键启动的Spark + Iceberg环境
-- **Jupyter集成**: 交互式学习和实验平台
-- **权限管理**: 解决了容器权限和Python版本问题
+### 🛠️ Technical Environment
+- **Dockerized Deployment**: One-click Spark + Iceberg environment
+- **Jupyter Integration**: Interactive learning and experimentation platform
+- **Permission Management**: Resolved container permissions and Python version issues
 
-### 📊 实现功能
-- **表创建**: 使用`USING ICEBERG`语法创建分区表
-- **数据操作**: 成功插入8条用户事件数据
-- **分区策略**: 按日期(`days(event_time)`)自动分区
-- **元数据查询**:
-  - `.snapshots` - 查看表快照历史
-  - `.files` - 查看物理文件分布
-  - `.history` - 查看表变更历史
+### 📊 Implemented Features
+- **Table Creation**: Create partitioned tables using `USING ICEBERG` syntax
+- **Data Operations**: Successfully inserted 8 user event records
+- **Partitioning Strategy**: Automatic partitioning by date (`days(event_time)`)
+- **Metadata Queries**:
+  - `.snapshots` - View table snapshot history
+  - `.files` - View physical file distribution
+  - `.history` - View table change history
 
-### 🎯 验证结果
-- ✅ 创建了`local.demo.user_events`表
-- ✅ 数据正确分区到2024-01-15和2024-01-16
-- ✅ 生成了2个Parquet文件（6+2条记录）
-- ✅ Metadata查询全部正常工作
-- ✅ ACID事务特性得到验证
+### 🎯 Verification Results
+- ✅ Created `local.demo.user_events` table
+- ✅ Data correctly partitioned to 2024-01-15 and 2024-01-16
+- ✅ Generated 2 Parquet files (6+2 records)
+- ✅ All metadata queries working normally
+- ✅ ACID transaction features verified
 
-## 📋 项目完成检查清单
+## 📋 Project Completion Checklist
 
-### Project 1 检查清单 ✅
-- [x] 代码可以成功运行
-- [x] 有详细的README说明
-- [x] 包含执行步骤和结果截图
-- [x] 记录遇到的问题和解决方案
-- [x] 总结学到的关键概念
-- [x] Docker环境配置完整
-- [x] Jupyter教程可重现执行
+### Project 1 Checklist ✅
+- [x] Code runs successfully
+- [x] Detailed README documentation
+- [x] Includes execution steps and result screenshots
+- [x] Records problems encountered and solutions
+- [x] Summarizes key concepts learned
+- [x] Complete Docker environment configuration
+- [x] Reproducible Jupyter tutorial execution
 
-### 后续项目检查清单
-- [ ] 代码可以成功运行
-- [ ] 有详细的README说明
-- [ ] 包含执行步骤和结果截图
-- [ ] 记录遇到的问题和解决方案
-- [ ] 总结学到的关键概念
+### Future Projects Checklist
+- [ ] Code runs successfully
+- [ ] Detailed README documentation
+- [ ] Includes execution steps and result screenshots
+- [ ] Records problems encountered and solutions
+- [ ] Summarizes key concepts learned
 
-## 🔧 开发环境要求
+## 🔧 Development Environment Requirements
 
-### 基础环境 ✅
+### Basic Environment ✅
 - Java 11/17/21
 - Apache Spark 3.5.0 ✅
-- Docker (用于本地测试) ✅
+- Docker (for local testing) ✅
 - Iceberg 1.4.3 ✅
 
-### 云环境 (可选)
-- AWS账户 (S3, Glue, EMR)
-- Azure账户 (ADLS, Synapse)
-- GCP账户 (GCS, Dataproc)
+### Cloud Environment (Optional)
+- AWS Account (S3, Glue, EMR)
+- Azure Account (ADLS, Synapse)
+- GCP Account (GCS, Dataproc)
 
-## 📖 学习流程总结
+## 📖 Learning Process Summary
 
-### Project 1 学习收获 ✅
-1. **环境搭建** - 掌握了Docker化Iceberg开发环境 ✅
-2. **基础概念** - 理解了Spark引擎 + Iceberg表格式的架构 ✅
-3. **实际操作** - 完成了表创建、数据插入、查询分析 ✅
-4. **问题解决** - 处理了Python版本冲突、权限配置等实际问题 ✅
-5. **特性验证** - 验证了分区、事务、元数据等核心特性 ✅
+### Project 1 Learning Gains ✅
+1. **Environment Setup** - Mastered Docker-based Iceberg development environment ✅
+2. **Basic Concepts** - Understood Spark engine + Iceberg table format architecture ✅
+3. **Practical Operations** - Completed table creation, data insertion, query analysis ✅
+4. **Problem Solving** - Handled Python version conflicts, permission configuration issues ✅
+5. **Feature Verification** - Verified partitioning, transactions, metadata core features ✅
 
-### 后续项目流程
-1. **阅读项目说明** - 理解目标和要求
-2. **环境准备** - 搭建必要的开发环境
-3. **代码实现** - 按步骤完成项目代码
-4. **测试验证** - 运行并验证结果
-5. **文档记录** - 更新README和学习笔记
-6. **问题总结** - 记录遇到的问题和解决方案
+### Future Project Workflow
+1. **Read Project Documentation** - Understand goals and requirements
+2. **Environment Preparation** - Set up necessary development environment
+3. **Code Implementation** - Complete project code step by step
+4. **Testing and Verification** - Run and verify results
+5. **Documentation** - Update README and learning notes
+6. **Problem Summary** - Record problems encountered and solutions
 
-## 🎯 当前学习成果
+## 🎯 Current Learning Achievements
 
-完成Project 1后，你现在已经能够：
+After completing Project 1, you can now:
 
-- ✅ 独立搭建Iceberg开发环境
-- ✅ 创建和管理基础Iceberg表
-- ✅ 使用分区策略优化数据存储
-- ✅ 查询和分析Iceberg表元数据
-- ✅ 理解Spark与Iceberg的集成机制
-- ✅ 排查和解决常见环境问题
+- ✅ Independently set up Iceberg development environment
+- ✅ Create and manage basic Iceberg tables
+- ✅ Use partitioning strategies to optimize data storage
+- ✅ Query and analyze Iceberg table metadata
+- ✅ Understand Spark and Iceberg integration mechanisms
+- ✅ Troubleshoot and resolve common environment issues
 
-## 🚀 下一步建议
+## 🚀 Next Steps Recommendations
 
-基于Project 1的成功完成，建议按以下顺序继续：
+Based on Project 1's successful completion, suggested continuation order:
 
-1. **Project 2 - Schema Evolution**: 基于现有表实验添加列、修改类型
-2. **Project 3 - Time Travel**: 利用现有快照演示时间旅行查询
-3. **Project 4 - Cloud Integration**: 将环境迁移到云平台
-4. **Project 5 - Production Pipeline**: 构建完整的生产数据流
+1. **Project 2 - Schema Evolution**: Experiment with adding columns and modifying types based on existing tables
+2. **Project 3 - Time Travel**: Demonstrate time travel queries using existing snapshots
+3. **Project 4 - Cloud Integration**: Migrate environment to cloud platforms
+4. **Project 5 - Production Pipeline**: Build complete production data flows
 
 ---
 
-**查看已完成项目**: [01-first-iceberg-table - 创建第一个Iceberg表](01-first-iceberg-table/README.md) ✅
+**View Completed Project**: [01-first-iceberg-table - First Iceberg Table](01-first-iceberg-table/README.md) ✅
 
-**开始下一个项目**: Schema Evolution实验 (即将开始)
+**Start Next Project**: Schema Evolution Experiments (Coming Soon)

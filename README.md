@@ -1,206 +1,206 @@
-# Apache Iceberg 学习指南
+# Apache Iceberg Learning Guide
 
-## 🎯 学习目标
-作为一名Data Engineer，系统掌握Apache Iceberg这一现代数据湖表格式，能够在生产环境中有效使用。
+## 🎯 Learning Objectives
+As a Data Engineer, systematically master Apache Iceberg, a modern data lake table format, to effectively use it in production environments.
 
-## 📚 学习路径
+## 📚 Learning Path
 
-### 第一阶段：核心概念掌握 (Week 1-2)
-**目标**: 理解Iceberg的核心价值和基本概念
+### Phase 1: Core Concepts Mastery (Week 1-2)
+**Goal**: Understand Iceberg's core value and basic concepts
 
-#### 📖 理论学习
-- [ ] **什么是Apache Iceberg？**
-  - 开放表格式的概念
-  - 与传统Hive表的区别
-  - 数据湖vs数据仓库的演进
+#### 📖 Theoretical Learning
+- [ ] **What is Apache Iceberg?**
+  - Open table format concepts
+  - Differences from traditional Hive tables
+  - Evolution from data lakes to data warehouses
 
-- [ ] **核心特性深入理解**
-  - [ ] Schema Evolution - 无痛schema变更
-  - [ ] Hidden Partitioning - 自动分区管理
-  - [ ] Time Travel - 时间旅行查询
-  - [ ] ACID事务 - 数据一致性保证
-  - [ ] 多引擎支持 - Spark/Flink/Trino等
+- [ ] **Deep dive into core features**
+  - [ ] Schema Evolution - Painless schema changes
+  - [ ] Hidden Partitioning - Automatic partition management
+  - [ ] Time Travel - Time travel queries
+  - [ ] ACID Transactions - Data consistency guarantees
+  - [ ] Multi-engine Support - Spark/Flink/Trino etc.
 
-#### 🔍 推荐阅读
-- [ ] 官方文档首页: https://iceberg.apache.org/
-- [ ] Iceberg规范: https://iceberg.apache.org/spec/
-- [ ] `docs/docs/index.md` - 项目概述
-- [ ] `docs/docs/reliability.md` - 可靠性特性
-- [ ] `docs/docs/performance.md` - 性能特性
+#### 🔍 Recommended Reading
+- [ ] Official homepage: https://iceberg.apache.org/
+- [ ] Iceberg specification: https://iceberg.apache.org/spec/
+- [ ] `docs/docs/index.md` - Project overview
+- [ ] `docs/docs/reliability.md` - Reliability features
+- [ ] `docs/docs/performance.md` - Performance features
 
-**完成标准**: 能够向同事解释Iceberg的核心价值和使用场景
-
----
-
-### 第二阶段：动手实践 (Week 3-5)
-**目标**: 在本地环境搭建并运行Iceberg
-
-#### 🛠️ 环境搭建
-- [ ] **本地开发环境**
-  - [ ] 安装Java 11/17/21
-  - [ ] 克隆并构建项目: `./gradlew build`
-  - [ ] 配置IDE (推荐IntelliJ IDEA)
-
-- [ ] **Spark集成实践**
-  - [ ] 阅读: `docs/docs/spark-getting-started.md`
-  - [ ] 搭建Spark + Iceberg环境
-  - [ ] 运行第一个示例
-
-#### 💡 核心实践项目
-- [ ] **项目1: 创建第一个Iceberg表**
-  - 使用Spark创建表
-  - 插入测试数据
-  - 查询验证
-
-- [ ] **项目2: Schema Evolution实验**
-  - 添加新列
-  - 修改列类型
-  - 删除列并验证数据完整性
-
-- [ ] **项目3: Time Travel功能**
-  - 创建多个快照
-  - 查询历史数据
-  - 版本回滚操作
-
-#### 📋 学习检查点
-- [ ] 成功创建和查询Iceberg表
-- [ ] 理解表的文件组织结构
-- [ ] 掌握基本的DDL和DML操作
+**Completion Criteria**: Able to explain Iceberg's core value and use cases to colleagues
 
 ---
 
-### 第三阶段：架构深入 (Week 6-8)
-**目标**: 深入理解Iceberg内部架构和设计原理
+### Phase 2: Hands-on Practice (Week 3-5)
+**Goal**: Set up and run Iceberg in local environment
 
-#### 🏗️ 架构学习
-- [ ] **核心模块分析**
-  - [ ] `iceberg-api` - 公共接口设计
-  - [ ] `iceberg-core` - 核心实现逻辑
-  - [ ] `iceberg-data` - 数据访问层
+#### 🛠️ Environment Setup
+- [ ] **Local Development Environment**
+  - [ ] Install Java 11/17/21
+  - [ ] Clone and build project: `./gradlew build`
+  - [ ] Configure IDE (IntelliJ IDEA recommended)
 
-- [ ] **存储格式支持**
-  - [ ] `iceberg-parquet` - Parquet集成
-  - [ ] `iceberg-orc` - ORC集成
-  - [ ] 格式选择和优化策略
+- [ ] **Spark Integration Practice**
+  - [ ] Read: `docs/docs/spark-getting-started.md`
+  - [ ] Set up Spark + Iceberg environment
+  - [ ] Run first example
 
-#### 🔧 Java API深入
-- [ ] 阅读: `docs/docs/java-api-quickstart.md`
-- [ ] 理解表操作API
-- [ ] 自定义数据读写逻辑
-- [ ] 元数据管理机制
+#### 💡 Core Practice Projects
+- [ ] **Project 1: Create First Iceberg Table**
+  - Create table using Spark
+  - Insert test data
+  - Query and verify
 
-#### 📊 性能优化学习
-- [ ] 文件大小调优策略
-- [ ] 分区设计最佳实践
-- [ ] 压缩算法选择
-- [ ] 查询优化技巧
+- [ ] **Project 2: Schema Evolution Experiments**
+  - Add new columns
+  - Modify column types
+  - Remove columns and verify data integrity
 
----
+- [ ] **Project 3: Time Travel Features**
+  - Create multiple snapshots
+  - Query historical data
+  - Version rollback operations
 
-### 第四阶段：生产应用 (Week 9-12)
-**目标**: 掌握生产环境部署和运维
-
-#### ☁️ 云平台集成
-- [ ] **AWS集成**
-  - [ ] 阅读: `docs/docs/aws.md`
-  - [ ] S3存储配置
-  - [ ] Glue Catalog集成
-  - [ ] IAM权限配置
-
-- [ ] **多引擎支持**
-  - [ ] Spark集成优化
-  - [ ] Flink流处理集成
-  - [ ] Trino查询引擎配置
-
-#### 🔧 运维实践
-- [ ] **表维护操作**
-  - [ ] 阅读: `docs/docs/maintenance.md`
-  - [ ] 文件压缩策略
-  - [ ] 快照清理
-  - [ ] 统计信息更新
-
-- [ ] **监控和调试**
-  - [ ] 性能监控指标
-  - [ ] 常见问题排查
-  - [ ] 日志分析技巧
+#### 📋 Learning Checkpoints
+- [ ] Successfully create and query Iceberg tables
+- [ ] Understand table file organization structure
+- [ ] Master basic DDL and DML operations
 
 ---
 
-## 📈 学习进度追踪
+### Phase 3: Architecture Deep Dive (Week 6-8)
+**Goal**: Deep understanding of Iceberg internal architecture and design principles
 
-### 每周学习计划
-| 周次 | 主要任务 | 完成状态 | 备注 |
-|------|----------|----------|------|
-| Week 1 | 核心概念学习 | ✅ 已完成 | concepts基础学习完成 |
-| Week 2 | 理论知识巩固 | ⏳ 进行中 | 开始环境搭建和实践 |
-| Week 3 | 环境搭建 | ⭕ 未开始 | |
-| Week 4-5 | Spark集成实践 | ⭕ 未开始 | |
-| Week 6-7 | 架构深入学习 | ⭕ 未开始 | |
-| Week 8 | Java API掌握 | ⭕ 未开始 | |
-| Week 9-10 | 云平台集成 | ⭕ 未开始 | |
-| Week 11-12 | 生产运维实践 | ⭕ 未开始 | |
+#### 🏗️ Architecture Learning
+- [ ] **Core Module Analysis**
+  - [ ] `iceberg-api` - Public interface design
+  - [ ] `iceberg-core` - Core implementation logic
+  - [ ] `iceberg-data` - Data access layer
 
-### 关键里程碑
-- [ ] **里程碑1**: 完成第一个Iceberg表的创建和查询
-- [ ] **里程碑2**: 成功演示Schema Evolution功能
-- [ ] **里程碑3**: 在云环境部署Iceberg生产表
-- [ ] **里程碑4**: 集成到现有数据管道
+- [ ] **Storage Format Support**
+  - [ ] `iceberg-parquet` - Parquet integration
+  - [ ] `iceberg-orc` - ORC integration
+  - [ ] Format selection and optimization strategies
 
----
+#### 🔧 Java API Deep Dive
+- [ ] Read: `docs/docs/java-api-quickstart.md`
+- [ ] Understand table operation APIs
+- [ ] Custom data read/write logic
+- [ ] Metadata management mechanisms
 
-## 📝 学习笔记模板
-
-### 每日学习记录
-创建格式: `notes/YYYY-MM-DD.md`
-- 今日学习内容
-- 关键概念理解
-- 实践操作记录
-- 遇到的问题和解决方案
-- 明日计划
-
-### 实践项目记录
-- `projects/` - 实际操作的代码和配置
-- `examples/` - 学习过程中的示例代码
-- `troubleshooting/` - 问题排查记录
+#### 📊 Performance Optimization Learning
+- [ ] File size tuning strategies
+- [ ] Partition design best practices
+- [ ] Compression algorithm selection
+- [ ] Query optimization techniques
 
 ---
 
-## 🎯 学习成果验证
+### Phase 4: Production Applications (Week 9-12)
+**Goal**: Master production environment deployment and operations
 
-### 理论掌握程度自测
-- [ ] 能够解释Iceberg相比传统表格式的优势
-- [ ] 理解ACID事务在数据湖中的重要性
-- [ ] 掌握分区策略的设计原则
-- [ ] 了解多引擎并发访问的机制
+#### ☁️ Cloud Platform Integration
+- [ ] **AWS Integration**
+  - [ ] Read: `docs/docs/aws.md`
+  - [ ] S3 storage configuration
+  - [ ] Glue Catalog integration
+  - [ ] IAM permission configuration
 
-### 实践能力验证
-- [ ] 独立搭建Iceberg开发环境
-- [ ] 设计和实现数据迁移方案
-- [ ] 解决生产环境的性能问题
-- [ ] 为团队提供技术培训
+- [ ] **Multi-engine Support**
+  - [ ] Spark integration optimization
+  - [ ] Flink streaming integration
+  - [ ] Trino query engine configuration
+
+#### 🔧 Operations Practice
+- [ ] **Table Maintenance Operations**
+  - [ ] Read: `docs/docs/maintenance.md`
+  - [ ] File compaction strategies
+  - [ ] Snapshot cleanup
+  - [ ] Statistics updates
+
+- [ ] **Monitoring and Debugging**
+  - [ ] Performance monitoring metrics
+  - [ ] Common issue troubleshooting
+  - [ ] Log analysis techniques
 
 ---
 
-## 📚 参考资源
+## 📈 Learning Progress Tracking
 
-### 官方资源
-- [Apache Iceberg官网](https://iceberg.apache.org/)
-- [Iceberg GitHub仓库](https://github.com/apache/iceberg)
-- [官方文档](https://iceberg.apache.org/docs/latest/)
+### Weekly Learning Plan
+| Week | Main Tasks | Status | Notes |
+|------|------------|---------|-------|
+| Week 1 | Core concepts learning | ✅ Completed | Basic concepts learning done |
+| Week 2 | Theory consolidation | ⏳ In Progress | Started environment setup and practice |
+| Week 3 | Environment setup | ⭕ Not Started | |
+| Week 4-5 | Spark integration practice | ⭕ Not Started | |
+| Week 6-7 | Architecture deep learning | ⭕ Not Started | |
+| Week 8 | Java API mastery | ⭕ Not Started | |
+| Week 9-10 | Cloud platform integration | ⭕ Not Started | |
+| Week 11-12 | Production operations practice | ⭕ Not Started | |
 
-### 社区资源
-- [Iceberg Slack社区](https://apache-iceberg.slack.com/)
-- [邮件列表](mailto:dev@iceberg.apache.org)
-- [技术博客和案例分享]
+### Key Milestones
+- [ ] **Milestone 1**: Complete creation and querying of first Iceberg table
+- [ ] **Milestone 2**: Successfully demonstrate Schema Evolution functionality
+- [ ] **Milestone 3**: Deploy Iceberg production tables in cloud environment
+- [ ] **Milestone 4**: Integrate into existing data pipeline
 
-### 相关技术栈
+---
+
+## 📝 Learning Notes Template
+
+### Daily Learning Records
+Create format: `notes/YYYY-MM-DD.md`
+- Today's learning content
+- Key concept understanding
+- Practice operation records
+- Problems encountered and solutions
+- Tomorrow's plan
+
+### Practice Project Records
+- `projects/` - Actual code and configurations
+- `examples/` - Example code during learning
+- `troubleshooting/` - Problem troubleshooting records
+
+---
+
+## 🎯 Learning Achievement Validation
+
+### Theoretical Mastery Self-Assessment
+- [ ] Can explain Iceberg's advantages over traditional table formats
+- [ ] Understand the importance of ACID transactions in data lakes
+- [ ] Master partition strategy design principles
+- [ ] Understand multi-engine concurrent access mechanisms
+
+### Practical Capability Verification
+- [ ] Independently set up Iceberg development environment
+- [ ] Design and implement data migration solutions
+- [ ] Solve production environment performance issues
+- [ ] Provide technical training for the team
+
+---
+
+## 📚 Reference Resources
+
+### Official Resources
+- [Apache Iceberg Official Website](https://iceberg.apache.org/)
+- [Iceberg GitHub Repository](https://github.com/apache/iceberg)
+- [Official Documentation](https://iceberg.apache.org/docs/latest/)
+
+### Community Resources
+- [Iceberg Slack Community](https://apache-iceberg.slack.com/)
+- [Mailing List](mailto:dev@iceberg.apache.org)
+- [Technical Blogs and Case Studies]
+
+### Related Technology Stack
 - Apache Spark
 - Apache Flink
 - Trino/Presto
-- 云存储服务 (S3/ADLS/GCS)
+- Cloud Storage Services (S3/ADLS/GCS)
 
 ---
 
-**最后更新**: 2024-01-XX
-**学习者**: [你的名字]
-**当前进度**: 第一阶段 - 核心概念学习中
+**Last Updated**: 2024-01-XX
+**Learner**: [Your Name]
+**Current Progress**: Phase 1 - Core concepts learning in progress
