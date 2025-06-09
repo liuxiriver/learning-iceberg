@@ -1,125 +1,125 @@
-# 什么是表格式(Table Format)？
+# What is Table Format?
 
-**提问时间**: 2024-01-01
-**学习阶段**: 第一阶段 - 核心概念掌握
-**难度级别**: 初级
+**Asked Date**: 2025-06-09
+**Learning Phase**: Phase 1 - Core Concepts Mastery
+**Difficulty Level**: Beginner
 
-## 🤔 问题
+## 🤔 Question
 
-什么是表格式(Table Format)？它解决了什么问题？
+What is Table Format? What problems does it solve?
 
-## 💡 答案
+## 💡 Answer
 
-### 表格式的定义
+### Definition of Table Format
 
-**表格式(Table Format)** 是一种数据组织和管理的规范，它在文件存储层之上提供了一个抽象层，使得存储在数据湖中的文件可以像传统数据库表一样进行管理和查询。
+**Table Format** is a specification for data organization and management that provides an abstraction layer above the file storage layer, enabling files stored in data lakes to be managed and queried like traditional database tables.
 
-### 为什么需要表格式？
+### Why Do We Need Table Format?
 
-在传统的数据湖架构中，我们面临以下问题：
+In traditional data lake architectures, we face the following problems:
 
-#### 1. **文件管理复杂**
+#### 1. **Complex File Management**
 ```
-传统数据湖:
+Traditional Data Lake:
 /data/events/year=2023/month=01/day=01/file1.parquet
 /data/events/year=2023/month=01/day=01/file2.parquet
 /data/events/year=2023/month=01/day=02/file3.parquet
 ...
 
-问题：
-- 需要手动管理分区目录
-- 文件碎片化严重
-- 元数据分散，难以维护
+Problems:
+- Manual partition directory management required
+- Severe file fragmentation
+- Scattered metadata, difficult to maintain
 ```
 
-#### 2. **Schema演进困难**
-- 添加新列需要重写所有历史数据
-- 列类型变更容易导致数据不一致
-- 缺乏版本管理机制
+#### 2. **Difficult Schema Evolution**
+- Adding new columns requires rewriting all historical data
+- Column type changes easily lead to data inconsistency
+- Lack of version management mechanisms
 
-#### 3. **数据一致性差**
-- 多个作业同时写入可能导致数据损坏
-- 没有事务保证
-- 读写冲突频繁
+#### 3. **Poor Data Consistency**
+- Multiple jobs writing simultaneously may cause data corruption
+- No transaction guarantees
+- Frequent read-write conflicts
 
-#### 4. **查询性能问题**
-- 需要扫描大量文件才能找到目标数据
-- 缺乏统计信息优化查询计划
-- 分区剪枝效果有限
+#### 4. **Query Performance Issues**
+- Need to scan many files to find target data
+- Lack of statistics for query plan optimization
+- Limited partition pruning effectiveness
 
-### 表格式的解决方案
+### Table Format Solutions
 
-表格式通过以下方式解决这些问题：
+Table formats solve these problems through:
 
-#### 1. **统一元数据管理**
+#### 1. **Unified Metadata Management**
 ```
-表格式架构:
+Table Format Architecture:
 Table Metadata
-├── Schema (列定义，类型信息)
-├── Partition Spec (分区规则)
-├── Snapshots (数据版本)
-├── Manifests (文件清单)
-└── Data Files (实际数据)
+├── Schema (column definitions, type information)
+├── Partition Spec (partitioning rules)
+├── Snapshots (data versions)
+├── Manifests (file manifests)
+└── Data Files (actual data)
 ```
 
-#### 2. **ACID事务支持**
-- **原子性**: 操作要么全部成功，要么全部失败
-- **一致性**: 数据始终保持有效状态
-- **隔离性**: 并发操作互不干扰
-- **持久性**: 提交的更改永久保存
+#### 2. **ACID Transaction Support**
+- **Atomicity**: Operations either succeed completely or fail completely
+- **Consistency**: Data always maintains valid state
+- **Isolation**: Concurrent operations don't interfere with each other
+- **Durability**: Committed changes are permanently saved
 
-#### 3. **Schema演进**
-- 支持无痛添加、删除、重命名列
-- 向前向后兼容性
-- 版本历史追踪
+#### 3. **Schema Evolution**
+- Support painless adding, removing, renaming columns
+- Forward and backward compatibility
+- Version history tracking
 
-#### 4. **时间旅行**
-- 可以查询任意历史时点的数据
-- 支持数据回滚
-- 便于审计和调试
+#### 4. **Time Travel**
+- Query data at any historical point in time
+- Support data rollback
+- Convenient for auditing and debugging
 
-### 主流表格式对比
+### Comparison of Popular Table Formats
 
-| 特性 | Apache Iceberg | Delta Lake | Apache Hudi |
-|------|----------------|------------|--------------|
-| **开源协议** | Apache 2.0 | Apache 2.0 | Apache 2.0 |
-| **主要厂商** | Netflix, Apple | Databricks | Uber |
-| **引擎支持** | Spark, Flink, Trino | Spark | Spark, Flink |
-| **Schema演进** | ✅ 完整支持 | ✅ 完整支持 | ✅ 部分支持 |
-| **Time Travel** | ✅ 基于快照 | ✅ 基于版本 | ✅ 基于时间 |
-| **ACID** | ✅ 完整支持 | ✅ 完整支持 | ✅ 完整支持 |
+| Feature | Apache Iceberg | Delta Lake | Apache Hudi |
+|---------|----------------|------------|--------------|
+| **Open Source License** | Apache 2.0 | Apache 2.0 | Apache 2.0 |
+| **Main Vendor** | Netflix, Apple | Databricks | Uber |
+| **Engine Support** | Spark, Flink, Trino | Spark | Spark, Flink |
+| **Schema Evolution** | ✅ Full Support | ✅ Full Support | ✅ Partial Support |
+| **Time Travel** | ✅ Snapshot-based | ✅ Version-based | ✅ Time-based |
+| **ACID** | ✅ Full Support | ✅ Full Support | ✅ Full Support |
 | **Hidden Partitioning** | ✅ | ❌ | ❌ |
 
-### Iceberg vs 传统Hive表的区别
+### Differences Between Iceberg and Traditional Hive Tables
 
-#### **传统Hive表的局限**:
+#### **Limitations of Traditional Hive Tables**:
 
-1. **分区管理复杂**
+1. **Complex Partition Management**
 ```sql
--- Hive需要手动创建分区
+-- Hive requires manual partition creation
 ALTER TABLE events ADD PARTITION (year=2023, month=01, day=01);
--- 用户必须知道分区结构才能高效查询
+-- Users must know partition structure for efficient queries
 SELECT * FROM events WHERE year=2023 AND month=01;
 ```
 
-2. **Schema演进困难**
+2. **Difficult Schema Evolution**
 ```sql
--- Hive添加列通常需要重建表
+-- Hive adding columns often requires table rebuilding
 ALTER TABLE events ADD COLUMNS (new_column STRING);
--- 可能导致历史数据丢失或不一致
+-- May cause historical data loss or inconsistency
 ```
 
-3. **并发写入问题**
+3. **Concurrent Write Issues**
 ```
-多个作业同时写入同一分区 → 数据损坏
-读写同时进行 → 读到不完整数据
+Multiple jobs writing to same partition → Data corruption
+Reading and writing simultaneously → Reading incomplete data
 ```
 
-#### **Iceberg的优势**:
+#### **Iceberg Advantages**:
 
-1. **Hidden Partitioning (隐藏分区)**
+1. **Hidden Partitioning**
 ```sql
--- 创建表时定义分区转换
+-- Define partition transformations when creating table
 CREATE TABLE events (
     event_time timestamp,
     user_id bigint,
@@ -127,31 +127,31 @@ CREATE TABLE events (
 ) USING ICEBERG
 PARTITIONED BY (days(event_time));
 
--- 查询时用户无需知道分区结构
+-- Users don't need to know partition structure when querying
 SELECT * FROM events
 WHERE event_time >= '2023-01-01' AND event_time < '2023-01-02';
 ```
 
-2. **无痛Schema演进**
+2. **Painless Schema Evolution**
 ```sql
--- 添加列无需重写历史数据
+-- Adding columns without rewriting historical data
 ALTER TABLE events ADD COLUMN user_country string;
--- 自动处理新旧数据的兼容性
+-- Automatically handles compatibility between new and old data
 ```
 
-3. **ACID事务保证**
+3. **ACID Transaction Guarantees**
 ```sql
--- 原子性写入，要么成功要么失败
+-- Atomic writes, either succeed or fail completely
 INSERT INTO events SELECT * FROM staging_events;
--- 读写隔离，读操作看到一致的快照
+-- Read-write isolation, reads see consistent snapshots
 ```
 
-## 🔗 相关资源
+## 🔗 Related Resources
 
-- [Iceberg官方文档 - Table Format](https://iceberg.apache.org/docs/latest/)
-- [Netflix技术博客 - Iceberg设计原理](https://netflixtechblog.com/iceberg-tables-turning-the-iceberg-upside-down-59bb58dd7e7c)
-- [项目README](../../README.md)
+- [Iceberg Official Documentation - Table Format](https://iceberg.apache.org/docs/latest/)
+- [Netflix Tech Blog - Iceberg Design Principles](https://netflixtechblog.com/iceberg-tables-turning-the-iceberg-upside-down-59bb58dd7e7c)
+- [Project README](../../README.md)
 
-## 🏷️ 标签
+## 🏷️ Tags
 
-#概念理解 #表格式 #基础知识 #数据湖
+#concept-understanding #table-format #fundamentals #data-lake

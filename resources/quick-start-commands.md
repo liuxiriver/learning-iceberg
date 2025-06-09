@@ -306,5 +306,5 @@ else:
 - Iceberg: 1.4.3
 - Python: 3.11 (within container)
 
-**Last Updated**: 2024-01-XX
+**Last Updated**: 2025-06-09
 **Based on**: Successful Docker + Jupyter environment practice
