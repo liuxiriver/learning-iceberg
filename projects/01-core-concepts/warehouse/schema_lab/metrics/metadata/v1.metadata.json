@@ -1,0 +1,65 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "ab5f5cfa-af5e-4175-853a-32604b9d1f78",
+  "location" : "file:///home/jovyan/work/warehouse/schema_lab/metrics",
+  "last-sequence-number" : 0,
+  "last-updated-ms" : 1749996466651,
+  "last-column-id" : 5,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "metric_id",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 2,
+      "name" : "metric_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "value",
+      "required" : false,
+      "type" : "float"
+    }, {
+      "id" : 4,
+      "name" : "count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "recorded_at",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "recorded_at_day",
+      "transform" : "day",
+      "source-id" : 5,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : -1,
+  "refs" : { },
+  "snapshots" : [ ],
+  "statistics" : [ ],
+  "snapshot-log" : [ ],
+  "metadata-log" : [ ]
+}

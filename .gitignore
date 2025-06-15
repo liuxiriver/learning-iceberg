@@ -41,3 +41,6 @@ projects/*/warehouse/**/data/
 
 # Ivy cache
 projects/*/ivy2-cache/
+
+.cursorindexingignore
+.specstory/

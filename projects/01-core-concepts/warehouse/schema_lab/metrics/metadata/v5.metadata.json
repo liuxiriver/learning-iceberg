@@ -1,0 +1,192 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "ab5f5cfa-af5e-4175-853a-32604b9d1f78",
+  "location" : "file:///home/jovyan/work/warehouse/schema_lab/metrics",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1749996471458,
+  "last-column-id" : 5,
+  "current-schema-id" : 3,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "metric_id",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 2,
+      "name" : "metric_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "value",
+      "required" : false,
+      "type" : "float"
+    }, {
+      "id" : 4,
+      "name" : "count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "recorded_at",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  }, {
+    "type" : "struct",
+    "schema-id" : 1,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "metric_id",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 2,
+      "name" : "metric_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "value",
+      "required" : false,
+      "type" : "float"
+    }, {
+      "id" : 4,
+      "name" : "count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "recorded_at",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  }, {
+    "type" : "struct",
+    "schema-id" : 2,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "metric_id",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 2,
+      "name" : "metric_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "value",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 4,
+      "name" : "count",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 5,
+      "name" : "recorded_at",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  }, {
+    "type" : "struct",
+    "schema-id" : 3,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "metric_id",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 2,
+      "name" : "metric_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "value",
+      "required" : false,
+      "type" : "double"
+    }, {
+      "id" : 4,
+      "name" : "count",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 5,
+      "name" : "recorded_at",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ {
+      "name" : "recorded_at_day",
+      "transform" : "day",
+      "source-id" : 5,
+      "field-id" : 1000
+    } ]
+  } ],
+  "last-partition-id" : 1000,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 8124937693061013271,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 8124937693061013271,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 8124937693061013271,
+    "timestamp-ms" : 1749996469581,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1749996412239",
+      "added-data-files" : "2",
+      "added-records" : "4",
+      "added-files-size" : "2957",
+      "changed-partition-count" : "2",
+      "total-records" : "4",
+      "total-files-size" : "2957",
+      "total-data-files" : "2",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0"
+    },
+    "manifest-list" : "file:/home/jovyan/work/warehouse/schema_lab/metrics/metadata/snap-8124937693061013271-1-86f566f6-2e19-47fa-b1d7-59e737a72bb0.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1749996469581,
+    "snapshot-id" : 8124937693061013271
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1749996466651,
+    "metadata-file" : "file:/home/jovyan/work/warehouse/schema_lab/metrics/metadata/v1.metadata.json"
+  }, {
+    "timestamp-ms" : 1749996469581,
+    "metadata-file" : "file:/home/jovyan/work/warehouse/schema_lab/metrics/metadata/v2.metadata.json"
+  }, {
+    "timestamp-ms" : 1749996471430,
+    "metadata-file" : "file:/home/jovyan/work/warehouse/schema_lab/metrics/metadata/v3.metadata.json"
+  }, {
+    "timestamp-ms" : 1749996471446,
+    "metadata-file" : "file:/home/jovyan/work/warehouse/schema_lab/metrics/metadata/v4.metadata.json"
+  } ]
+}

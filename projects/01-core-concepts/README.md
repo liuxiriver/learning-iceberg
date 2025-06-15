@@ -1,6 +1,8 @@
-# Project 1: Your First Iceberg Table
+# Project 1: Core Iceberg Concepts & Schema Evolution
 
-**Learning Objective**: Create, operate and query Iceberg tables using Docker + Spark
+**Learning Objectives**: 
+- Master basic Iceberg table operations using Docker + Spark
+- Understand schema evolution capabilities and best practices
 
 ## 📋 Project Overview
 
@@ -9,6 +11,8 @@ In this project, you will:
 2. Create your first Iceberg table
 3. Insert and query data
 4. Understand table file organization structure
+5. **NEW**: Master schema evolution with hands-on experiments
+6. **NEW**: Learn complex data modeling with nested structures
 
 ## 🐳 Quick Start with Docker
 
@@ -42,6 +46,13 @@ In this project, you will:
 ./manage.sh jupyter
 ```
 
+Available notebooks:
+- `iceberg-tutorial.ipynb` - Basic Iceberg concepts and operations
+- `schema-evolution-tutorial.ipynb` - Schema evolution mastery
+- `time-travel-tutorial.ipynb` - Time travel and snapshot management  
+- `cloud-integration-tutorial.ipynb` - Cloud deployment patterns
+- `production-pipeline-tutorial.ipynb` - Production-ready workflows
+
 **Option B: Spark Shell**
 ```bash
 # Start Spark Shell with Iceberg
@@ -54,8 +65,10 @@ In this project, you will:
 
 **Using Jupyter Notebook (Recommended):**
 1. Run `./manage.sh jupyter` to open Jupyter Lab
-2. Open `notebooks/iceberg-tutorial.ipynb`
-3. Follow the step-by-step tutorial
+2. Choose your learning path:
+   - **Basic Concepts**: Open `notebooks/iceberg-tutorial.ipynb`
+   - **Schema Evolution**: Open `notebooks/schema-evolution-tutorial.ipynb`
+3. Follow the step-by-step tutorials
 
 **Using Spark Shell:**
 
@@ -235,13 +248,19 @@ Complete these tasks to validate your learning:
 ## 📊 Project Structure
 
 ```
-01-first-iceberg-table/
-├── README.md                    # This documentation
-├── docker-compose.yml           # Docker service configuration
-├── manage.sh                    # Environment management script
+01-core-concepts/
+├── README.md                           # This documentation
+├── docker-compose.yml                  # Docker service configuration
+├── manage.sh                          # Environment management script
+├── notebooks/
+│   ├── iceberg-tutorial.ipynb         # Basic Iceberg concepts tutorial
+│   ├── schema-evolution-tutorial.ipynb # Schema evolution tutorial
+│   ├── time-travel-tutorial.ipynb     # Time travel and snapshot management
+│   ├── cloud-integration-tutorial.ipynb # Cloud deployment patterns
+│   └── production-pipeline-tutorial.ipynb # Production-ready data workflows
 ├── scripts/
-│   └── test-iceberg.scala      # Test script
-└── warehouse/                   # Iceberg table storage
+│   └── test-iceberg.scala             # Test script
+└── warehouse/                          # Iceberg table storage
 ```
 
 ## 📝 Learning Notes
@@ -251,12 +270,18 @@ After completing the project, record:
 1. **Problems encountered and solutions**
 2. **Understanding of Iceberg table structure**
 3. **Differences felt compared to traditional Hive tables**
-4. **Next features you want to explore**
+4. **Schema evolution patterns learned**
+5. **Complex data modeling insights**
+6. **Next features you want to explore**
 
 ---
 
-**Estimated completion time**: 2-3 hours
-**Difficulty level**: Beginner
+**Estimated completion time**: 
+- Basic concepts: 2-3 hours
+- Schema evolution: 4-6 hours
+- **Total**: 6-9 hours
+
+**Difficulty level**: Beginner to Intermediate
 **Prerequisites**: Complete concepts theory learning
 
 ## 🌐 Accessing Services
@@ -280,7 +305,15 @@ After completing the project, record:
 ## 🔄 Next Steps
 
 After completing this project:
-1. Explore schema evolution in Project 2
-2. Learn about time travel queries
-3. Investigate table maintenance operations
-4. Study integration with other engines (Flink, Trino)
+1. **✅ Basic Concepts**: Master fundamental Iceberg operations
+2. **✅ Schema Evolution**: Learn to evolve table schemas safely 
+3. **🔄 Time Travel**: Explore snapshot management and historical queries (Available in notebooks)
+4. **🔄 Cloud Integration**: Deploy Iceberg in cloud environments (Available in notebooks)
+5. **🔄 Production Pipeline**: Build production-grade data workflows (Available in notebooks)
+
+**Available Tutorials in this Project:**
+- `iceberg-tutorial.ipynb` - Basic concepts and operations
+- `schema-evolution-tutorial.ipynb` - Schema evolution mastery
+- `time-travel-tutorial.ipynb` - Time travel and snapshots
+- `cloud-integration-tutorial.ipynb` - Cloud deployment patterns
+- `production-pipeline-tutorial.ipynb` - Production workflows

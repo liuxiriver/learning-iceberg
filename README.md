@@ -1,7 +1,66 @@
-# Apache Iceberg Learning Guide
+# Apache Iceberg Learning Repository
+
+## Project Overview
+This repository is designed for systematic learning and hands-on practice with Apache Iceberg. It is structured to be beginner-friendly, easy to maintain, and suitable for both self-study and onboarding new data engineers.
+
+## Directory Structure
+
+```
+learning-iceberg/
+  README.md            # Project overview and learning roadmap
+  docs/                # Documentation: concepts, Q&A, notes, best practices
+    concepts/          # Core concepts and theory (e.g., Table Format, Schema Evolution)
+    faq.md             # Frequently asked questions and troubleshooting
+    notes/             # Personal or team learning notes (by date or topic)
+  notebooks/           # All Jupyter/Zeppelin notebooks, organized by topic or date
+  projects/            # Hands-on projects, each in a separate subdirectory
+    01-first-iceberg-table/
+      notebooks/
+      scripts/
+      README.md
+      ...
+  data/                # Sample and experiment datasets for notebooks/scripts
+  env/                 # Environment configuration (docker-compose, manage.sh, etc.)
+  resources/           # Reference materials, quick start guides, external links
+```
+
+## Directory Descriptions
+
+- **docs/**: Centralized documentation for theory, Q&A, and learning notes. Includes core concepts, best practices, and troubleshooting.
+- **notebooks/**: All learning and experiment notebooks. Each notebook is self-contained and references data from the `data/` directory.
+- **projects/**: Practical projects, each with its own code, notebooks, and documentation. Projects are numbered and themed for progressive learning.
+- **data/**: Datasets used for experiments and notebook demonstrations. Ensures reproducibility and easy data access.
+- **env/**: Environment setup files, such as Docker Compose, shell scripts, and configuration templates for quick environment provisioning.
+- **resources/**: Additional reference materials, quick start command guides, and useful external resources.
+
+## Getting Started
+1. Set up your environment using files in the `env/` directory (e.g., `docker-compose.yml`, `manage.sh`).
+2. Explore theoretical knowledge and Q&A in the `docs/` directory.
+3. Run and experiment with notebooks in the `notebooks/` directory.
+4. Dive into hands-on projects in the `projects/` directory for practical experience.
+5. Use datasets from the `data/` directory for all experiments and notebooks.
+
+## Contribution Guide
+- Add new concepts, notes, or Q&A to the `docs/` directory.
+- Place new notebooks in the `notebooks/` directory, using clear and descriptive names.
+- For new projects, create a subdirectory under `projects/` with its own `README.md`.
+- Store all sample data in the `data/` directory.
+- Update the `README.md` to reflect any major structural or learning path changes.
+
+---
+
+This structure ensures clarity, ease of use, and scalability for both individual learners and teams. Happy learning with Apache Iceberg!
 
 ## 🎯 Learning Objectives
-As a Data Engineer, systematically master Apache Iceberg, a modern data lake table format, to effectively use it in production environments.
+
+- Understand the core concepts and architecture of Apache Iceberg, including its advantages over traditional table formats.
+- Gain hands-on experience with Iceberg table creation, data insertion, querying, schema evolution, and time travel features.
+- Learn to set up and configure Iceberg environments locally (via Docker) and on cloud platforms.
+- Master best practices for partitioning, file layout, metadata management, and table maintenance.
+- Develop troubleshooting skills for common issues encountered in Iceberg usage.
+- Integrate Iceberg with major compute engines (Spark, Flink, Trino) and cloud storage solutions.
+- Achieve the ability to design, deploy, and operate Iceberg-based data lakes in production environments.
+- Build a reusable knowledge base and practical project portfolio for future reference and team onboarding.
 
 ## 📚 Learning Path
 
