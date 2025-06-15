@@ -1,347 +1,283 @@
 # Projects Overview
 
-This directory contains all hands-on projects for learning Apache Iceberg. Each project corresponds to a key learning phase and is designed to reinforce both theoretical knowledge and practical skills.
+This directory contains comprehensive hands-on projects for learning Apache Iceberg. The projects are designed to provide both theoretical understanding and practical skills through interactive Jupyter notebooks and real-world scenarios.
 
 ## Table of Contents
 
-- [Phase 1: Core Concepts Mastery](#phase-1-core-concepts-mastery)
-- [Phase 2: Hands-on Practice](#phase-2-hands-on-practice)
-- [Phase 3: Architecture Deep Dive](#phase-3-architecture-deep-dive)
-- [Phase 4: Production Applications](#phase-4-production-applications)
+- [Current Project Status](#current-project-status)
+- [Phase 1: Core Concepts Mastery](#phase-1-core-concepts-mastery-completed)
+- [Phase 2: Hands-on Practice](#phase-2-hands-on-practice-planned)
+- [Phase 3: Architecture Deep Dive](#phase-3-architecture-deep-dive-planned)
+- [Phase 4: Production Applications](#phase-4-production-applications-planned)
+- [Getting Started](#getting-started)
 - [Project Workflow & Best Practices](#project-workflow--best-practices)
 
 ---
 
-## Phase 1: Core Concepts Mastery
-**Goal:** Understand the value, architecture, and basic features of Apache Iceberg.
+## Current Project Status
+
+### ✅ **Phase 1: Core Concepts Mastery** (Completed)
+**Project:** `01-core-concepts/`
+
+This comprehensive project contains everything needed to master Apache Iceberg fundamentals through interactive tutorials:
+
+**📚 Complete Tutorial Collection:**
+- **🚀 Basic Tutorial** (`iceberg-tutorial.ipynb`) - Table creation, data operations, metadata exploration
+- **🔧 Schema Evolution** (`schema-evolution-tutorial.ipynb`) - Safe schema changes, type promotions, compatibility
+- **⏰ Time Travel** (`time-travel-tutorial.ipynb`) - Snapshot management, historical queries, rollback operations
+- **☁️ Cloud Integration** (`cloud-integration-tutorial.ipynb`) - AWS/Azure/GCP deployment patterns
+- **🏭 Production Pipeline** (`production-pipeline-tutorial.ipynb`) - Advanced operations and best practices
+
+**🛠️ Ready-to-Use Environment:**
+- Complete Docker setup with Spark + Iceberg
+- Management scripts for easy startup/shutdown
+- Pre-configured Jupyter environment
+- Sample data and working examples
+
+---
+
+## Phase 1: Core Concepts Mastery (✅ Completed)
+**Goal:** Master Apache Iceberg fundamentals through comprehensive hands-on tutorials.
 
 **Project:** `01-core-concepts/`
-- Explore open table format concepts
-- Compare Iceberg with traditional Hive tables
-- Study the evolution from data lakes to data warehouses
-- Deep dive into core features:
-  - Schema Evolution
-  - Hidden Partitioning
-  - Time Travel
-  - ACID Transactions
-  - Multi-engine Support
 
-**Deliverables:**
-- Summary notes (notebook or markdown)
-- Key concept mindmap or diagram
-- Q&A or FAQ for this phase
+### 🎯 **Learning Objectives Covered:**
+- ✅ Understand open table format concepts and Iceberg architecture
+- ✅ Master table creation, data operations, and metadata management
+- ✅ Learn schema evolution patterns and best practices
+- ✅ Explore time travel capabilities for data recovery and analysis
+- ✅ Understand cloud deployment patterns for AWS, Azure, and GCP
+- ✅ Learn production-grade operations and performance optimization
 
-**Self-Check:**
-- Can you explain Iceberg's core value and use cases?
-- Can you describe the differences between Iceberg and Hive tables?
+### 📖 **Tutorial Modules:**
 
----
+#### 1. **Basic Iceberg Operations** (`iceberg-tutorial.ipynb`)
+- Table creation and partitioning strategies
+- Data insertion, updates, and querying
+- Metadata exploration (snapshots, files, history)
+- ACID transaction demonstrations
 
-## Phase 2: Hands-on Practice
-**Goal:** Set up and run Iceberg in a local environment, and master basic operations.
+#### 2. **Schema Evolution** (`schema-evolution-tutorial.ipynb`)
+- Safe column addition and removal
+- Data type promotions and compatibility
+- Complex nested structures (maps, arrays, structs)
+- Real-world evolution scenarios
 
-**Project:** `02-hands-on-practice/`
-- Environment setup (Docker, Java, Spark)
-- Spark + Iceberg integration
-- Create your first Iceberg table
-- Insert and query test data
-- Practice schema evolution (add/modify/remove columns)
-- Explore time travel features (snapshots, rollback)
+#### 3. **Time Travel** (`time-travel-tutorial.ipynb`)
+- Snapshot management and queries
+- Historical data access patterns
+- Rollback operations for data recovery
+- Change data capture (CDC) analysis
 
-**Deliverables:**
-- Jupyter notebooks with step-by-step operations
-- Screenshots or outputs of successful table creation and queries
-- Troubleshooting notes for any issues encountered
+#### 4. **Cloud Integration** (`cloud-integration-tutorial.ipynb`)
+- Multi-cloud deployment strategies
+- AWS S3 + Glue configuration
+- Azure ADLS + Synapse setup
+- GCP Cloud Storage + BigQuery integration
+- Security and performance optimization
 
-**Self-Check:**
-- Can you create and query an Iceberg table from scratch?
-- Can you perform schema evolution and time travel queries?
+#### 5. **Production Pipeline** (`production-pipeline-tutorial.ipynb`)
+- Advanced table operations
+- Performance monitoring and optimization
+- Maintenance procedures
+- Production best practices
 
----
-
-## Phase 3: Architecture Deep Dive
-**Goal:** Gain a deep understanding of Iceberg's internal architecture and advanced features.
-
-**Project:** `03-architecture-deep-dive/`
-- Analyze core modules: iceberg-api, iceberg-core, iceberg-data
-- Study storage format support: Parquet, ORC
-- Explore Java API for table operations
-- Implement custom data read/write logic
-- Investigate metadata management mechanisms
-- Experiment with performance optimization:
-  - File size tuning
-  - Partition design
-  - Compression algorithms
-  - Query optimization
-
-**Deliverables:**
-- Technical analysis notes (notebook or markdown)
-- Example code for Java API usage
-- Performance test results and summary
-
-**Self-Check:**
-- Can you explain the role of each core module?
-- Can you use the Java API for advanced table operations?
-- Can you identify and apply performance optimization strategies?
+### 🏆 **Completion Achievements:**
+After completing Phase 1, you can:
+- ✅ Set up and manage Iceberg environments
+- ✅ Create and operate production-ready tables
+- ✅ Implement safe schema evolution strategies
+- ✅ Use time travel for data recovery and analysis
+- ✅ Deploy Iceberg across cloud platforms
+- ✅ Apply performance optimization techniques
 
 ---
 
-## Phase 4: Production Applications
-**Goal:** Master deployment, integration, and operations in production environments.
+## Phase 2: Hands-on Practice (📋 Planned)
+**Goal:** Advanced hands-on practice with real-world scenarios and integration patterns.
 
-**Project:** `04-production-applications/`
-- Cloud platform integration (AWS, Azure, GCP)
-- S3/Glue/ADLS configuration
-- Multi-engine support (Spark, Flink, Trino)
-- Table maintenance (compaction, snapshot cleanup, stats update)
-- Monitoring and debugging (metrics, logs, troubleshooting)
+**Project:** `02-hands-on-practice/` (Coming Soon)
 
-**Deliverables:**
-- Cloud deployment scripts/configs
-- Maintenance and monitoring guides
-- Case studies or real-world integration examples
+**Planned Focus Areas:**
+- Complex data pipeline implementations
+- Multi-engine integration (Spark, Flink, Trino)
+- Advanced partitioning strategies
+- Custom catalog implementations
+- Integration with data governance tools
 
-**Self-Check:**
-- Can you deploy and operate Iceberg in a cloud environment?
-- Can you perform table maintenance and monitor performance?
-- Can you troubleshoot and resolve common production issues?
+---
+
+## Phase 3: Architecture Deep Dive (📋 Planned)
+**Goal:** Deep understanding of Iceberg internals and custom implementations.
+
+**Project:** `03-architecture-deep-dive/` (Coming Soon)
+
+**Planned Focus Areas:**
+- Core module analysis (iceberg-api, iceberg-core, iceberg-data)
+- Custom file format implementations
+- Java API development
+- Performance profiling and optimization
+- Metadata management internals
+
+---
+
+## Phase 4: Production Applications (📋 Planned)
+**Goal:** Master enterprise deployment and operations.
+
+**Project:** `04-production-applications/` (Coming Soon)
+
+**Planned Focus Areas:**
+- Enterprise security implementations
+- Disaster recovery procedures
+- Monitoring and alerting systems
+- Cost optimization strategies
+- Team training and documentation
+
+---
+
+## Getting Started
+
+### 🚀 **Quick Start with Phase 1:**
+
+1. **Navigate to the core concepts project:**
+   ```bash
+   cd 01-core-concepts/
+   ```
+
+2. **Start the environment:**
+   ```bash
+   ./manage.sh start
+   ```
+
+3. **Access Jupyter at:** `http://localhost:8888`
+
+4. **Follow the tutorial sequence:**
+   - Start with `iceberg-tutorial.ipynb` for basics
+   - Progress through schema evolution and time travel
+   - Explore cloud integration patterns
+   - Study production best practices
+
+5. **Experiment with your own data:**
+   - Use the provided environment
+   - Modify examples for your use cases
+   - Practice troubleshooting scenarios
 
 ---
 
 ## Project Workflow & Best Practices
 
-1. **Read the project README** to understand objectives and requirements.
-2. **Prepare the environment** using provided scripts/configs.
-3. **Follow the step-by-step notebooks or scripts** for each task.
-4. **Document problems and solutions** in each project.
-5. **Summarize key learnings** at the end of each phase.
-6. **Review self-check questions** to ensure mastery before moving to the next phase.
+### 📚 **Learning Path:**
+1. **Start with basics** - Complete `iceberg-tutorial.ipynb` first
+2. **Progress systematically** - Follow the recommended tutorial order
+3. **Practice actively** - Modify examples and try your own scenarios
+4. **Document learnings** - Keep notes on key insights and solutions
+5. **Apply knowledge** - Use concepts in real projects
+
+### 🔧 **Development Best Practices:**
+- Use the provided Docker environment for consistency
+- Run all tutorial cells to understand the concepts
+- Experiment with different parameters and scenarios
+- Review generated metadata and files to understand internals
+- Practice troubleshooting common issues
+
+### 📝 **Documentation:**
+- Each tutorial is self-contained with detailed explanations
+- Code examples include comprehensive comments
+- Real-world scenarios demonstrate practical applications
+- Best practices are highlighted throughout
 
 ---
 
-This structure ensures a progressive, project-driven learning experience. Each phase builds on the previous one, helping you grow from beginner to production-ready Iceberg practitioner.
+**Ready to learn Iceberg?** Start with [01-core-concepts](01-core-concepts/README.md) and work through the comprehensive tutorial collection!
 
-## 📂 Project Structure
+## 📂 Current Project Structure
 
 ```
 projects/
-├── 01-first-iceberg-table/         # ✅ Project 1: First Iceberg Table (Completed)
-│   ├── docker-compose.yml          # Docker environment configuration
-│   ├── manage.sh                   # Environment management script
-│   ├── notebooks/                  # Jupyter tutorials and examples
-│   │   └── iceberg-tutorial.ipynb  # Complete Iceberg tutorial
-│   ├── scripts/                    # Test scripts
-│   ├── warehouse/                  # Iceberg table storage location
-│   ├── README.md                   # Detailed project documentation
-│   └── SPARK_VS_ICEBERG.md        # Spark vs Iceberg relationship documentation
-├── 02-schema-evolution/            # ✅ Project 2: Schema Evolution Experiments (Completed)
-│   ├── docker-compose.yml          # Docker environment configuration
-│   ├── manage.sh                   # Environment management script
-│   ├── notebooks/                  # Schema evolution tutorials
-│   │   └── schema-evolution-tutorial.ipynb  # Complete schema evolution tutorial
-│   ├── scripts/                    # Demo and validation scripts
-│   │   ├── schema-evolution-demo.py         # Interactive demo script
-│   │   └── validation-tests.py             # Comprehensive validation tests
-│   ├── test-data/                  # Sample data for testing
-│   │   ├── users-v1.json           # Initial user data
-│   │   └── users-v2.json           # Evolved user data
-│   ├── warehouse/                  # Iceberg table storage location
-│   └── README.md                   # Detailed project documentation
-├── 03-time-travel/                 # Project 3: Time Travel Features (Planned)
-│   ├── demo/                       # Demo code
-│   └── README.md                   # Project documentation
-├── 04-cloud-integration/           # Project 4: Cloud Platform Integration (Planned)
-│   ├── aws/                        # AWS configuration
-│   ├── azure/                      # Azure configuration
-│   └── README.md                   # Project documentation
-└── 05-production-pipeline/         # Project 5: Production Data Pipeline (Planned)
-    ├── spark-jobs/                 # Spark jobs
-    ├── monitoring/                 # Monitoring configuration
-    └── README.md                   # Project documentation
+├── 01-core-concepts/                           # ✅ Complete Iceberg Learning Platform
+│   ├── docker-compose.yml                     # Docker environment setup
+│   ├── manage.sh                              # Environment management script
+│   ├── notebooks/                             # Complete tutorial collection
+│   │   ├── iceberg-tutorial.ipynb             # Basic operations and concepts
+│   │   ├── schema-evolution-tutorial.ipynb    # Schema evolution mastery
+│   │   ├── time-travel-tutorial.ipynb         # Time travel and snapshots
+│   │   ├── cloud-integration-tutorial.ipynb   # Multi-cloud deployment
+│   │   └── production-pipeline-tutorial.ipynb # Production best practices
+│   ├── scripts/                               # Supporting scripts
+│   │   └── test-iceberg.scala                 # Scala test examples
+│   ├── warehouse/                             # Iceberg data storage
+│   │   ├── schema_lab/                        # Sample database with tables
+│   │   │   ├── metrics/                       # Time-series data examples
+│   │   │   ├── products/                      # E-commerce data examples
+│   │   │   └── users/                         # User analytics examples
+│   ├── README.md                              # Detailed project guide
+│   └── SPARK_VS_ICEBERG.md                   # Architecture documentation
+├── 02-hands-on-practice/                      # 📋 Advanced Practice (Planned)
+├── 03-architecture-deep-dive/                 # 📋 Internal Architecture (Planned)
+├── 04-production-applications/                # 📋 Enterprise Operations (Planned)
+└── README.md                                  # This overview document
 ```
 
-## 🎯 Project Completion Status
+## 🎯 Learning Progression
 
-### ✅ Project 1: First Iceberg Table (Completed)
-- **Learning Goal**: Master basic Iceberg table creation and operations ✅
-- **Tech Stack**: Docker, Spark, Iceberg, Jupyter Notebook ✅
-- **Completion Time**: Completed
-- **Main Achievements**:
-  - ✅ Built complete Docker development environment
-  - ✅ Successfully integrated Spark 3.5.0 + Iceberg 1.4.3
-  - ✅ Created interactive Jupyter tutorial
-  - ✅ Implemented data insertion, querying and metadata exploration
-  - ✅ Resolved Python version conflicts and permission issues
-  - ✅ Verified partitioning and ACID transaction features
+### ✅ **Phase 1: Comprehensive Tutorials** (Ready to Use)
+The `01-core-concepts/` project provides everything you need:
 
-### ✅ Project 2: Schema Evolution Experiments (Completed)
-- **Learning Goal**: Master Iceberg's schema evolution capabilities ✅
-- **Tech Stack**: Docker, Spark SQL, Schema management, Jupyter Notebook ✅
-- **Completion Time**: Completed
-- **Main Achievements**:
-  - ✅ Built comprehensive schema evolution environment
-  - ✅ Demonstrated safe column addition and type promotions
-  - ✅ Implemented complex nested data structures (maps, arrays, structs)
-  - ✅ Created interactive Jupyter tutorial with real-world scenarios
-  - ✅ Developed validation framework for schema evolution testing
-  - ✅ Verified backward and forward compatibility features
-  - ✅ Performance analysis of schema changes
+**🚀 Foundation:** Basic Iceberg operations, table management, partitioning
+**🔧 Evolution:** Safe schema changes, type promotions, complex structures  
+**⏰ History:** Time travel queries, snapshots, rollback procedures
+**☁️ Cloud:** Multi-cloud deployment patterns and configurations
+**🏭 Production:** Advanced operations, monitoring, optimization
 
-### 🔄 Project 3: Time Travel Features (Planned)
-- **Learning Goal**: Master snapshot management and time travel queries
-- **Tech Stack**: Spark SQL, Snapshot API
-- **Estimated Time**: 2 days
+### 📋 **Future Phases** (Development Planned)
+- **Phase 2:** Advanced integration scenarios and custom implementations
+- **Phase 3:** Deep dive into Iceberg internals and Java API
+- **Phase 4:** Enterprise deployment and operational excellence
 
-### 🔄 Project 4: Cloud Platform Integration (Planned)
-- **Learning Goal**: Deploy and use Iceberg in cloud environments
-- **Tech Stack**: AWS S3/Glue, or Azure ADLS
-- **Estimated Time**: 3-5 days
+## 🔧 Technical Specifications
 
-### 🔄 Project 5: Production Data Pipeline (Planned)
-- **Learning Goal**: Build complete production-grade data pipeline
-- **Tech Stack**: Spark, Cloud services, Monitoring
-- **Estimated Time**: 1-2 weeks
+### ✅ **Verified Environment**
+- **Docker Setup:** Complete containerized Spark + Iceberg environment
+- **Spark Version:** 3.5.0 with Iceberg 1.4.3 integration
+- **Jupyter Access:** Interactive notebook environment on port 8888
+- **Data Storage:** Working Iceberg warehouse with sample tables
 
-## 📋 Project Completion Results
+### 📊 **Proven Capabilities**
+- **Table Operations:** CRUD operations with ACID guarantees
+- **Schema Management:** Safe evolution without data rewrite
+- **Time Travel:** Historical queries and point-in-time recovery
+- **Cloud Integration:** AWS/Azure/GCP configuration patterns
+- **Performance:** Optimized for production workloads
 
-### Project 1: First Iceberg Table ✅
+## 🎯 Skills You'll Master
 
-### 🛠️ Technical Environment
-- **Dockerized Deployment**: One-click Spark + Iceberg environment
-- **Jupyter Integration**: Interactive learning and experimentation platform
-- **Permission Management**: Resolved container permissions and Python version issues
+### **After Completing All Tutorials:**
+- ✅ Set up and manage Iceberg development environments
+- ✅ Design optimal table structures and partitioning strategies
+- ✅ Implement safe schema evolution for growing applications
+- ✅ Use time travel for data recovery and historical analysis
+- ✅ Deploy Iceberg across major cloud platforms
+- ✅ Apply production optimization and monitoring techniques
+- ✅ Troubleshoot common issues and performance problems
 
-### 📊 Implemented Features
-- **Table Creation**: Create partitioned tables using `USING ICEBERG` syntax
-- **Data Operations**: Successfully inserted 8 user event records
-- **Partitioning Strategy**: Automatic partitioning by date (`days(event_time)`)
-- **Metadata Queries**:
-  - `.snapshots` - View table snapshot history
-  - `.files` - View physical file distribution
-  - `.history` - View table change history
+## 🚀 Quick Start Guide
 
-### 🎯 Verification Results
-- ✅ Created `local.demo.user_events` table
-- ✅ Data correctly partitioned to 2024-01-15 and 2024-01-16
-- ✅ Generated 2 Parquet files (6+2 records)
-- ✅ All metadata queries working normally
-- ✅ ACID transaction features verified
+1. **Clone and setup:**
+   ```bash
+   cd 01-core-concepts/
+   ./manage.sh start
+   ```
 
-### Project 2: Schema Evolution Experiments ✅
+2. **Access tutorials:** http://localhost:8888
 
-### 🛠️ Technical Environment
-- **Dockerized Deployment**: Dedicated schema evolution environment (port 8889)
-- **Jupyter Integration**: Interactive schema evolution tutorial and experiments
-- **Validation Framework**: Comprehensive testing and validation scripts
+3. **Follow learning path:**
+   - Basic Operations → Schema Evolution → Time Travel → Cloud → Production
 
-### 📊 Implemented Features
-- **Column Operations**: Safe addition, removal, and renaming of columns
-- **Type Promotions**: int→bigint, float→double, decimal precision increases
-- **Complex Types**: Maps, arrays, structs with nested data structures
-- **Real-World Scenarios**: E-commerce, IoT, analytics table evolution patterns
-- **Compatibility Testing**: Backward and forward compatibility validation
-
-### 🎯 Verification Results
-- ✅ Created multiple evolved tables (users, metrics, products)
-- ✅ Successfully added nullable columns without data rewriting
-- ✅ Performed safe type promotions maintaining data integrity
-- ✅ Implemented complex nested structures with maps and arrays
-- ✅ Validated historical data accessibility after schema changes
-- ✅ Performance analysis showing minimal impact of schema evolution
-
-## 📋 Project Completion Checklist
-
-### Project 1 Checklist ✅
-- [x] Code runs successfully
-- [x] Detailed README documentation
-- [x] Includes execution steps and result screenshots
-- [x] Records problems encountered and solutions
-- [x] Summarizes key concepts learned
-- [x] Complete Docker environment configuration
-- [x] Reproducible Jupyter tutorial execution
-
-### Project 2 Checklist ✅
-- [x] Code runs successfully
-- [x] Detailed README documentation
-- [x] Includes execution steps and result screenshots
-- [x] Records problems encountered and solutions
-- [x] Summarizes key concepts learned
-- [x] Complete Docker environment configuration
-- [x] Reproducible Jupyter tutorial execution
-- [x] Comprehensive validation tests
-- [x] Real-world scenario demonstrations
-
-### Future Projects Checklist
-- [ ] Code runs successfully
-- [ ] Detailed README documentation
-- [ ] Includes execution steps and result screenshots
-- [ ] Records problems encountered and solutions
-- [ ] Summarizes key concepts learned
-
-## 🔧 Development Environment Requirements
-
-### Basic Environment ✅
-- Java 11/17/21
-- Apache Spark 3.5.0 ✅
-- Docker (for local testing) ✅
-- Iceberg 1.4.3 ✅
-
-### Cloud Environment (Optional)
-- AWS Account (S3, Glue, EMR)
-- Azure Account (ADLS, Synapse)
-- GCP Account (GCS, Dataproc)
-
-## 📖 Learning Process Summary
-
-### Project 1 Learning Gains ✅
-1. **Environment Setup** - Mastered Docker-based Iceberg development environment ✅
-2. **Basic Concepts** - Understood Spark engine + Iceberg table format architecture ✅
-3. **Practical Operations** - Completed table creation, data insertion, query analysis ✅
-4. **Problem Solving** - Handled Python version conflicts, permission configuration issues ✅
-5. **Feature Verification** - Verified partitioning, transactions, metadata core features ✅
-
-### Future Project Workflow
-1. **Read Project Documentation** - Understand goals and requirements
-2. **Environment Preparation** - Set up necessary development environment
-3. **Code Implementation** - Complete project code step by step
-4. **Testing and Verification** - Run and verify results
-5. **Documentation** - Update README and learning notes
-6. **Problem Summary** - Record problems encountered and solutions
-
-## 🎯 Current Learning Achievements
-
-After completing Project 1, you can now:
-
-- ✅ Independently set up Iceberg development environment
-- ✅ Create and manage basic Iceberg tables
-- ✅ Use partitioning strategies to optimize data storage
-- ✅ Query and analyze Iceberg table metadata
-- ✅ Understand Spark and Iceberg integration mechanisms
-- ✅ Troubleshoot and resolve common environment issues
-
-After completing Project 2, you can now:
-
-- ✅ Safely evolve table schemas without breaking existing applications
-- ✅ Add, remove, and rename columns while maintaining data integrity
-- ✅ Perform safe data type promotions for growing data requirements
-- ✅ Design complex nested data structures for flexible data modeling
-- ✅ Validate schema compatibility across different time periods
-- ✅ Analyze performance impact of schema evolution operations
-
-## 🚀 Next Steps Recommendations
-
-Based on Projects 1 & 2 successful completion, suggested continuation order:
-
-1. **✅ Project 1 - Core Concepts**: Master basic Iceberg table operations ✅
-2. **✅ Project 2 - Schema Evolution**: Master schema evolution capabilities ✅ 
-3. **Project 3 - Time Travel**: Demonstrate time travel queries and snapshot management
-4. **Project 4 - Cloud Integration**: Migrate environment to cloud platforms
-5. **Project 5 - Production Pipeline**: Build complete production data flows
+4. **Practice and experiment:**
+   - Modify examples with your data
+   - Try different scenarios
+   - Explore advanced features
 
 ---
 
-**Completed Projects**:
-- [01-core-concepts - First Iceberg Table](01-core-concepts/README.md) ✅
-- [02-schema-evolution - Schema Evolution Experiments](02-schema-evolution/README.md) ✅
-
-**Start Next Project**: Time Travel Features (Coming Soon)
+**Current Status:** Phase 1 complete with 5 comprehensive tutorials ready for immediate use!
