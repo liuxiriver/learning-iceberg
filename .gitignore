@@ -36,8 +36,7 @@ build/
 *.temp
 
 # Warehouse data (can be regenerated)
-projects/*/warehouse/demo/
-projects/*/warehouse/**/data/
+projects/*/warehouse/
 
 # Ivy cache
 projects/*/ivy2-cache/
